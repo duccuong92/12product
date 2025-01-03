@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
+
+
 
 export function ListProduct() {
   const [products, setProducts] = useState([]);
 
+  const navigate = useNavigate();
+  
   const getAllProduct = (controller) => {
     fetch("https://apitraining.cybersoft.edu.vn/api/ProductApi/getall", {
       signal: controller ? controller.signal : undefined,
@@ -31,7 +35,7 @@ export function ListProduct() {
         console.log("Dù thành công hay thất bại đều chạy hàm này");
       });
   };
-  useEffect(() => {
+    useEffect(() => {
     // TH: Chưa call API xong, thì người dùng đã chuyển sang trang khác
     // Cancel API đó
 
@@ -100,7 +104,9 @@ export function ListProduct() {
                     >
                       Delete
                     </button>
-                    <button className="border px-4 py-1 rounded">
+                    <button 
+                    onClick={() => navigate(`/product/${p.id}`)}
+                    className="border px-4 py-1 rounded">
                       View Detail
                     </button>
                   </td>

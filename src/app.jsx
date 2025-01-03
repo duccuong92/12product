@@ -15,9 +15,10 @@ export function App() {
         <Route index element={<Home />} />
           <Route path="new-product" element={<NewProduct />}>New Products</Route>
           <Route path="list-product" element={<ListProduct />}>Products List</Route>
-          <Route path="product/:id" element={<ProductDetail />}>Products Detail</Route>
+          <Route path="/product/:id" element={<ProductDetail />}>Products Detail</Route>
         </Route>
       </Routes>
+    
     </>
   );
 }
