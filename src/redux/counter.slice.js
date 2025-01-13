@@ -6,7 +6,7 @@ const counterSlice = createSlice({
 
     //initialState: giá trị khởi tạo, bất kỳ kiểu dữ liệu gì cũng được
     initialState: {
-        value: 99
+        value: 0
     },
 
     reducers: {

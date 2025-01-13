@@ -91,3 +91,18 @@ thì khác nhau
 
 #Redux
 Dùngg để lưu trữ những dữ liệu cần sự thốngg nhất cho toàn bộ ứng dụng: user login, language, theme,...
+
+
+#useContext
+Context
+- Truyền state từ cấp cha đến cấp con khôngg cần thông qua nhiều cấp, gỉai quyết bài toán như redux.
+- Có thể biến thành global state: vì chúng ta chỉ dử dụngg nó 1 lần duy nhất. Bao bọc toàn bộ app của mình context.
+
+#Tăng giảm font size
+
+
+#custom hook 
+- function bình thuờng
+- có sử dụng các hook bên trong functin
+1. tái sử dụng
+2. tách logic của component ra hook.
